@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
 import { AlertCircle, CheckCircle, Database, TrendingUp, Search } from 'lucide-react';
 
 const IncidentServicePredictor = () => {
@@ -9,7 +9,6 @@ const IncidentServicePredictor = () => {
   // Sistema de predicción mejorado con 885 registros analizados
   const analizarDescripcion = (descripcion) => {
     const desc = descripcion.toUpperCase();
-    const palabras = desc.split(/[\s,.:;()]+/).filter(p => p.length > 2);
     
     // Resultado inicial
     let resultado = {
